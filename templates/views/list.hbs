@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List</title>
+    <h1>Crime Records</h1>
+</head>
+
+<body>
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+    <div class="main-content">
+    {{>header}} <!--Adding the partial as header-->
+    <p>{{message}}</p>
+    <br>
+    {{#each todos}}
+    <table style="width:100%">
+  <tr>
+    <th>Time:</th>
+    <td>{{time}}</td>
+  </tr>
+  <tr>
+    <th>Location:</th>
+    <td>{{location}}</td>
+  </tr>
+  <tr>
+    <th>Incident:</th>
+    <td>{{report}}</td>
+  </tr>
+  <br>
+  <br>
+</table>
+    {{/each}}
+ 
+
+    </div>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

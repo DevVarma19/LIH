@@ -1,0 +1,27 @@
+<div>
+    <a href="/index">Get Details</a>
+</div>
+<hr>
+
+<% if(details!=null) { %>
+    <table>
+        <tr>
+            <th>Location</th>
+            <th>Time </th>
+            <th>Incident</th>
+        </tr>
+        <% details.forEach(function(item){ %>
+            <tr>
+                <td>
+                    <%= item.location%>
+                </td>
+                <td>
+                    <%= item.time %>
+                </td>
+                <td>
+                    <%= item.report%>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+    <% } %>
